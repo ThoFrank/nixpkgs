@@ -4688,6 +4688,22 @@ let
 
       wakatime.vscode-wakatime = callPackage ./WakaTime.vscode-wakatime { };
 
+      webfreak.debug = buildVscodeMarketplaceExtension {
+        mktplcRef = {
+          name = "debug";
+          publisher = "webfreak";
+          version = "0.27.0";
+          hash = "sha256-p/k5UcXldXKFKbPbnW603Jsut53n01azeDhWMDSd4nw=";
+        };
+        meta = {
+          changelog = "https://marketplace.visualstudio.com/items/webfreak.debug/changelog";
+          description = "GDB, LLDB & Mago-MI Debugger support for VSCode";
+          downloadPage = "https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame";
+          homepage = "https://github.com/WebFreak001/code-debug";
+          license = lib.licenses.unlicense;
+        };
+      };
+
       wholroyd.jinja = buildVscodeMarketplaceExtension {
         mktplcRef = {
           name = "jinja";
